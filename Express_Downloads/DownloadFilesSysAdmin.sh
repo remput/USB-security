@@ -1,17 +1,12 @@
-mkdir sysAdmin
-cd sysAdmin
-sudo apt install git
+sudo apt install -y git
 git clone https://github.com/remput/USB-security.git
 sudo add-apt-repository ppa:unit193/encryption
+sudo apt-get -y update
+sudo apt install -y veracrypt
+sudo apt-get install -y mysql-server mysql-workbench
+sudo echo "deb https://apt.enpass.io/ stable main" > \
+  /etc/apt/sources.list.d/enpass.list
+wget -O - https://apt.enpass.io/keys/enpass-linux.key | apt-key add -
 sudo apt-get update
-sudo apt install veracrypt
-get https://dl.winehq.org/wine-builds/Release.key && sudo apt-key add Release.key
-sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
-sudo dpkg --add-architecture i386
-sudo apt-get update && sudo apt-get install --install-recommends wine-devel
-wget https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.44/KeePass-2.44.zip/download
-unzip download
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.14-1_all.deb
-sudo dpkg -i mysql-apt-config_0.8.14-1_all.deb
-sudo apt-get update
+sudo apt-get install enpass
 mv USB-security ~/Desktop
