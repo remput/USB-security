@@ -1,0 +1,5 @@
+#!/bin/sh
+TSTAMP=$(date +"%T")
+ps > ~/xanfiles/saved/ps.txt
+mv ~/xanfiles/saved/ps.txt ~/xanfiles/saved/ps_$TSTAMP.txt
+echo "ps saved"
