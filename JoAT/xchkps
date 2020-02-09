@@ -1,0 +1,8 @@
+#!/bin/sh
+echo "New process(es) found: "
+comm -23 ~/JoAT/saved/ps_1.txt ~/JoAT/saved/ps_2.txt
+rm -r ~/JoAT/saved
+echo "Would you like to kill the process?"
+
+#Read Y/N
+

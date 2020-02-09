@@ -1,0 +1,13 @@
+sudo cp xinit /usr/bin/
+sudo cp xsave /usr/bin/
+sudo cp xchksum /usr/bin/
+sudo cp xchkps /usr/bin/
+sudo cp xtest /usr/bin/
+
+sudo chmod 755 /usr/bin/xinit
+sudo chmod 755 /usr/bin/xsave
+sudo chmod 755 /usr/bin/xchksum
+sudo chmod 755 /usr/bin/xchkps
+sudo chmod 755 /usr/bin/xtest
+
+echo 'Successfully Installed, type xinit to start'
